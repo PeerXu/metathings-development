@@ -1,7 +1,7 @@
 FROM golang:1.10-alpine
 
 RUN apk add git make protobuf
-RUN git clone github.com/protocolbuffers/protobuf --depth 1 && \
+RUN git clone https://github.com/protocolbuffers/protobuf.git --depth 1 && \
     cd protobuf/src && \
     cp -r google /usr/local/include && \
     cd ~ && \
