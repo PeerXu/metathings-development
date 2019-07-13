@@ -3,6 +3,7 @@ FROM golang:1.10-alpine
 RUN apk add git make protobuf
 RUN git clone https://github.com/protocolbuffers/protobuf.git --depth 1 && \
     cd protobuf/src && \
+    mkdir -p /usr/local/include && \
     cp -r google /usr/local/include && \
     cd ~ && \
     rm -rf protobuf
